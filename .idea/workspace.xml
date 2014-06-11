@@ -32,7 +32,7 @@
     <file path="/UserDaoImpl.java" changelist="459d8769-b8e2-4b1f-91a8-5483bc81a82c" time="1402470731132" ignored="false" />
     <file path="/SpringDataSouceSample.iml" changelist="459d8769-b8e2-4b1f-91a8-5483bc81a82c" time="1402475211558" ignored="false" />
     <file path="/Dummy.regexp" changelist="459d8769-b8e2-4b1f-91a8-5483bc81a82c" time="1402475869111" ignored="false" />
-    <file path="/UserDaoJPA.java" changelist="459d8769-b8e2-4b1f-91a8-5483bc81a82c" time="1402483504989" ignored="false" />
+    <file path="/UserDaoJPA.java" changelist="459d8769-b8e2-4b1f-91a8-5483bc81a82c" time="1402485049147" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,10 +102,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDaoJPA.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="UserDaoJPA.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/dao/UserDaoJPA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="4" selection-start="973" selection-end="973" vertical-scroll-proportion="0.0">
+            <state line="28" column="7" selection-start="743" selection-end="743" vertical-scroll-proportion="0.36241612">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Query.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final.jar!/javax/persistence/Query.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="8" selection-start="413" selection-end="413" vertical-scroll-proportion="-5.76">
               <folding />
             </state>
           </provider>
@@ -114,16 +123,25 @@
       <file leaf-file-name="UserService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="33" selection-start="666" selection-end="677" vertical-scroll-proportion="0.0">
+            <state line="19" column="14" selection-start="528" selection-end="541" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mvc-dispatcher-servlet.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Transactional.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/4.0.5.RELEASE/spring-tx-4.0.5.RELEASE.jar!/org/springframework/transaction/annotation/Transactional.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="43" selection-start="962" selection-end="982" vertical-scroll-proportion="-9.76">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mvc-dispatcher-servlet.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="4" selection-start="2399" selection-end="2399" vertical-scroll-proportion="0.7235023">
+            <state line="47" column="4" selection-start="2399" selection-end="2399" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -841,11 +859,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/4.0.5.RELEASE/spring-jdbc-4.0.5.RELEASE-sources.jar!/org/springframework/jdbc/core/PreparedStatementCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="17" selection-start="1748" selection-end="1748" vertical-scroll-proportion="0.47560975" />
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/jdk1.8.0/src.zip!/java/sql/PreparedStatement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="60" column="17" selection-start="1498" selection-end="1498" vertical-scroll-proportion="0.0" />
@@ -928,23 +941,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/dao/UserDaoJPA.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="4" selection-start="973" selection-end="973" vertical-scroll-proportion="0.0">
+        <state line="47" column="4" selection-start="2399" selection-end="2399" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/4.0.5.RELEASE/spring-tx-4.0.5.RELEASE.jar!/org/springframework/transaction/annotation/Transactional.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="43" selection-start="962" selection-end="982" vertical-scroll-proportion="-9.76">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="33" selection-start="666" selection-end="677" vertical-scroll-proportion="0.0">
+        <state line="19" column="14" selection-start="528" selection-end="541" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final.jar!/javax/persistence/Query.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="4" selection-start="2399" selection-end="2399" vertical-scroll-proportion="0.7235023">
+        <state line="19" column="8" selection-start="413" selection-end="413" vertical-scroll-proportion="-5.76">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/dao/UserDaoJPA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="7" selection-start="743" selection-end="743" vertical-scroll-proportion="0.36241612">
           <folding />
         </state>
       </provider>
