@@ -16,9 +16,6 @@
         <constructor-arg ref="dataSource"/>
     </bean>
 
-    <bean id="userDao"
-          class="net.therap.dao.UserDao">
-        <constructor-arg ref="jdbcTemplate"></constructor-arg>
-    </bean>
+
 
 </beans>

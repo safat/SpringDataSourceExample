@@ -1,10 +1,10 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd
-        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd">
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 
     <context:component-scan base-package="net.therap"/>
 
@@ -19,28 +19,30 @@
 
     <bean id="jdbcTemplate"
           class="org.springframework.jdbc.core.JdbcTemplate">
-          <constructor-arg ref="dataSource"/>
+        <constructor-arg ref="dataSource"/>
     </bean>
 
     <bean id="sessionFactory"
-         class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-         <property name="dataSource" ref="dataSource"/>
-         <property name="mappingResources">
-            <list>
-                <value>product.hbm.xml</value>
-            </list>
-        </property>
+          class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+
         <property name="hibernateProperties">
             <value>
                 hibernate.dialect=org.hibernate.dialect.HSQLDialect
             </value>
         </property>
+
+        <property name="packagesToScan" value="net.therap.domain"></property>
+
     </bean>
 
-    <!--<bean id="userDao"-->
-    <!--class="net.therap.dao.UserDao">-->
-    <!--<constructor-arg ref="jdbcTemplate"></constructor-arg>-->
-    <!--</bean>-->
+
+    <!--Hibernate Transaction Manager for Database Transaction -->
+    <bean id="transactionManager"
+          class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <tx:annotation-driven/>
 
 
 </beans>

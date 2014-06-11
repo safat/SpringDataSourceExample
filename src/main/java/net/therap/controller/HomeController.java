@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.List;
 
 @Controller
-@RequestMapping ("/")
+@RequestMapping ("/test")
 public class HomeController {
 
     @Autowired
@@ -25,7 +25,7 @@ public class HomeController {
         for (User user : userList) {
             userNames += user.getName() + " </br>";
         }
-        model.addAttribute("message", "Hello --- </br> " + userNames);
+        model.addAttribute("message", userList.size()+".. Hello --- </br> " + userNames);
 
         return "hello";
     }

@@ -1,15 +1,13 @@
 package net.therap.dao;
 
 import net.therap.domain.User;
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
-import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import org.springframework.stereotype.Repository;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -19,31 +17,27 @@ import java.util.List;
  * Time: 1:00 PM
  */
 @Repository
-@Qualifier("userDao")
-public class UserDao extends HibernateDaoSupport {
-
-    private JdbcTemplate jdbcTemplate;
+@Qualifier ("userDao")
+public class UserDao {
 
     @Autowired
-    public UserDao(JdbcTemplate jdbcTemplate) {
-        this.jdbcTemplate = jdbcTemplate;
+    private SessionFactory sessionFactory;
+
+    public void setSessionFactory(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
+
+    public void insertUser(User user) {
+        Session session = sessionFactory.getCurrentSession();
+        session.save(user);
     }
 
     public List<User> getUserList() {
-        String query = "SELECT id, name, password, is_admin FROM user";
-
-        List<User> userList = jdbcTemplate.query(query, new RowMapper<User>() {
-            @Override
-            public User mapRow(ResultSet resultSet, int rowNum) throws SQLException {
-                User user = new User();
-                user.setId(resultSet.getString("id"));
-                user.setName(resultSet.getString("name"));
-                user.setPassword(resultSet.getString("password"));
-                user.setAdmin(resultSet.getBoolean("is_admin"));
-                return user;
-            }
-        });
-
+        Session session = sessionFactory.getCurrentSession();
+//        Query query = session.createQuery("FROM User");
+//        List<User> userList = query.list();
+        Criteria criteria = session.createCriteria(User.class);
+        List<User> userList = criteria.list();
         return userList;
     }
 }

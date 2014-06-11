@@ -5,6 +5,7 @@ import net.therap.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -16,12 +17,13 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 @Service
+@Transactional (value = "transactionManager")
 public class UserService {
     @Autowired
     @Qualifier ("userDao")
     private UserDao userDao;
 
     public List<User> getUserList() {
-        return userDao.getUserList();
+       return userDao.getUserList();
     }
 }
