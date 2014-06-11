@@ -16,10 +16,9 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 @Service
-//@Transactional (value = "transactionManager")
 public class UserService {
     @Autowired
-    @Qualifier ("userDao")
+    @Qualifier ("userDaoJPA")
     private UserDao userDao;
 
     public List<User> getUserList() {

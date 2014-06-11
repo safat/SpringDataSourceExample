@@ -16,8 +16,6 @@
     <jee:jndi-lookup id="dataSource"
                      jndi-name="/jdbc/MealPlanDB"
                      resource-ref="true"/>
-
-    <!--jpa-->
     <bean id="jpaVendorAdapter"
           class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
         <property name="database" value="HSQL"/>
@@ -27,7 +25,6 @@
                   value="org.hibernate.dialect.HSQLDialect"/>
     </bean>
 
-
     <bean id="entityManagerFactory" class=
             "org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="dataSource" ref="dataSource"/>
@@ -35,16 +32,10 @@
         <property name="packagesToScan" value="net.therap.domain"/>
     </bean>
 
-    <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor"/>
-    <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
-
-
-
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactory" />
     </bean>
 
     <tx:annotation-driven/>
-
 
 </beans>
