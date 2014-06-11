@@ -3,6 +3,7 @@ package net.therap.dao;
 import net.therap.domain.User;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -24,7 +25,18 @@ public class UserDaoJPA implements UserDao{
 
     @Override
     public List<User> getUserList() {
+        User user = new User();
+        user.setId("sujon");
+        user.setName("sujan sarkar");
+        user.setPassword("sujon 123");
+        user.setIsAdmin(true);
+        addUser(user);
         Query query  = entityManager.createQuery("FROM User ");
         return query.getResultList();
     }
+
+    private void addUser(User user) {
+      entityManager.persist(user);
+      entityManager.flush();
+   }
 }

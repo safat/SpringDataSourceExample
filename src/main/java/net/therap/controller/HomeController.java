@@ -18,14 +18,14 @@ public class HomeController {
     private UserService userService;
 
     @RequestMapping (method = RequestMethod.GET)
-    public String printWelcome(ModelMap model) {
+    public String getUserList(ModelMap model) {
         List<User> userList = userService.getUserList();
 
         String userNames = "";
         for (User user : userList) {
-            userNames += user.getName() + " </br>";
+            userNames += user.toString() + " </br>";
         }
-        model.addAttribute("message", userList.size()+" --- </br> " + userNames);
+        model.addAttribute("message", userList.size()+" <hr> </br> " + userNames);
 
         return "hello";
     }
