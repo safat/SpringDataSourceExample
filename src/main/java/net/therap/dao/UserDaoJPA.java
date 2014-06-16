@@ -3,7 +3,6 @@ package net.therap.dao;
 import net.therap.domain.User;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -17,7 +16,7 @@ import java.util.List;
  * Time: 1:00 PM
  */
 @Repository
-@Qualifier ("userDao")
+@Qualifier ("userDaoJpa")
 public class UserDaoJPA implements UserDao{
 
     @PersistenceContext
