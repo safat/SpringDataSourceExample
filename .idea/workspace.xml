@@ -49,17 +49,19 @@
     <file path="/ProductManager.java" changelist="459d8769-b8e2-4b1f-91a8-5483bc81a82c" time="1402828551349" ignored="false" />
     <file path="$PROJECT_DIR$/../sp/pom.xml" changelist="459d8769-b8e2-4b1f-91a8-5483bc81a82c" time="1402894060246" ignored="false" />
     <file path="$PROJECT_DIR$/../sp/src/main/resources/spring-config.xml" changelist="459d8769-b8e2-4b1f-91a8-5483bc81a82c" time="1402894102215" ignored="false" />
-    <file path="/CompanyController.java" changelist="459d8769-b8e2-4b1f-91a8-5483bc81a82c" time="1402903406502" ignored="false" />
+    <file path="/CompanyController.java" changelist="459d8769-b8e2-4b1f-91a8-5483bc81a82c" time="1402910754697" ignored="false" />
     <file path="/employeeInsertSuccess.jsp" changelist="459d8769-b8e2-4b1f-91a8-5483bc81a82c" time="1402895679852" ignored="false" />
     <file path="/showCompanies.jsp" changelist="459d8769-b8e2-4b1f-91a8-5483bc81a82c" time="1402900699192" ignored="false" />
     <file path="/CompanyService.java" changelist="459d8769-b8e2-4b1f-91a8-5483bc81a82c" time="1402903163003" ignored="false" />
     <file path="/CompanyDao.java" changelist="459d8769-b8e2-4b1f-91a8-5483bc81a82c" time="1402903172533" ignored="false" />
-    <file path="/Company.java" changelist="459d8769-b8e2-4b1f-91a8-5483bc81a82c" time="1402902333959" ignored="false" />
-    <file path="/Client.java" changelist="459d8769-b8e2-4b1f-91a8-5483bc81a82c" time="1402899884999" ignored="false" />
+    <file path="/Company.java" changelist="459d8769-b8e2-4b1f-91a8-5483bc81a82c" time="1402909073528" ignored="false" />
+    <file path="/Client.java" changelist="459d8769-b8e2-4b1f-91a8-5483bc81a82c" time="1402909058630" ignored="false" />
     <file path="$PROJECT_DIR$/../HibernateMaven/HibernateMaven.iml" changelist="459d8769-b8e2-4b1f-91a8-5483bc81a82c" time="1402903565770" ignored="false" />
     <file path="$PROJECT_DIR$/../HibernateMaven/src/main/java/com/domain/Student.java" changelist="459d8769-b8e2-4b1f-91a8-5483bc81a82c" time="1402903631887" ignored="false" />
     <file path="$PROJECT_DIR$/../HibernateMaven/src/main/java/hibernate.cfg.xml" changelist="459d8769-b8e2-4b1f-91a8-5483bc81a82c" time="1402904062457" ignored="false" />
     <file path="/hibernate.cfg.xml" changelist="459d8769-b8e2-4b1f-91a8-5483bc81a82c" time="1402904062457" ignored="false" />
+    <file path="$PROJECT_DIR$/../HibernateMaven/src/main/resources/hibernate.cfg.xml" changelist="459d8769-b8e2-4b1f-91a8-5483bc81a82c" time="1402907405817" ignored="false" />
+    <file path="/CompanyDaoJPA.java" changelist="459d8769-b8e2-4b1f-91a8-5483bc81a82c" time="1402910863794" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,10 +127,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="User.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/domain/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="13" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="CompanyController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/controller/CompanyController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="29" selection-start="2031" selection-end="2031" vertical-scroll-proportion="0.0">
+            <state line="55" column="52" selection-start="1668" selection-end="1668" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -136,59 +149,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/controller/HomeController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="16" selection-start="812" selection-end="812" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hello.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hello.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="employeeInsertSuccess.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/employeeInsertSuccess.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="showCompanies.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/showCompanies.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="310" selection-end="310" vertical-scroll-proportion="-8.75">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CompanyService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/service/CompanyService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="33" selection-start="731" selection-end="731" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CompanyDao.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="CompanyDao.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/dao/CompanyDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="23" selection-start="684" selection-end="684" vertical-scroll-proportion="0.0">
+            <state line="13" column="17" selection-start="266" selection-end="266" vertical-scroll-proportion="0.24193548">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -196,31 +160,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Company.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/domain/Company.java">
+      <file leaf-file-name="CompanyDaoJPA.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/dao/CompanyDaoJPA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="16" selection-start="1682" selection-end="1682" vertical-scroll-proportion="0.0">
+            <state line="33" column="13" selection-start="869" selection-end="869" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDaoJPA.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/dao/UserDaoJPA.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="30" selection-start="748" selection-end="748" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Client.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/domain/Client.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="23" selection-start="254" selection-end="254" vertical-scroll-proportion="0.21825397">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -235,7 +181,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/net/therap/domain/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/therap/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/therap/dao/Dummy.java" />
@@ -245,12 +190,13 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/employeeInsertSuccess.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/net/therap/dao/UserDaoJPA.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/therap/domain/Client.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/showCompanies.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/net/therap/service/CompanyService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/therap/dao/CompanyDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/therap/domain/Client.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/therap/domain/Company.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/therap/controller/CompanyController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/therap/dao/CompanyDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/therap/dao/CompanyDaoJPA.java" />
       </list>
     </option>
   </component>
@@ -435,34 +381,12 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SpringDataSouceSample" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SpringDataSouceSample" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="therap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -969,20 +893,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="25" selection-start="2081" selection-end="2081" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="17" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="22" selection-start="666" selection-end="666" vertical-scroll-proportion="0.0">
@@ -1001,15 +911,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="41" selection-start="430" selection-end="450" vertical-scroll-proportion="-6.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/domain/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1034,34 +935,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/dao/UserDaoJPA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="30" selection-start="748" selection-end="748" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/dao/CompanyDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="23" selection-start="684" selection-end="684" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/domain/Company.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="16" selection-start="1682" selection-end="1682" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/service/CompanyService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="33" selection-start="731" selection-end="731" vertical-scroll-proportion="0.0">
+        <state line="30" column="26" selection-start="826" selection-end="826" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1070,7 +946,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/controller/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="16" selection-start="812" selection-end="812" vertical-scroll-proportion="0.0">
+        <state line="26" column="9" selection-start="812" selection-end="812" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="17" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/dao/UserDaoJPA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="30" selection-start="750" selection-end="750" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/domain/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="43" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/domain/Company.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="27" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/domain/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="13" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1079,17 +996,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/controller/CompanyController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="29" selection-start="2031" selection-end="2031" vertical-scroll-proportion="0.0">
+        <state line="55" column="52" selection-start="1668" selection-end="1668" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/domain/Client.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/dao/CompanyDaoJPA.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="23" selection-start="254" selection-end="254" vertical-scroll-proportion="0.21825397">
-          <folding />
+        <state line="33" column="13" selection-start="869" selection-end="869" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/therap/dao/CompanyDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="17" selection-start="266" selection-end="266" vertical-scroll-proportion="0.24193548">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

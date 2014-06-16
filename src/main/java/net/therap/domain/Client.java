@@ -1,6 +1,7 @@
 package net.therap.domain;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created with IntelliJ IDEA.
@@ -10,17 +11,17 @@ import javax.persistence.*;
  * To change this template use File | Settings | File Templates.
  */
 @Entity
-@Table(name = "client")
-public class Client {
+@Table (name = "client")
+public class Client implements Serializable {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     @Column (name = "idclient")
     private Integer idclient;
 
-    @Column(name = "name")
+    @Column (name = "name")
     private String name;
 
-    @Column(name = "address")
+    @Column (name = "address")
     private String address;
 
     public Integer getIdclient() {

@@ -1,6 +1,6 @@
 package net.therap.service;
 
-import net.therap.dao.CompanyDao;
+import net.therap.dao.CompanyDaoJPA;
 import net.therap.domain.Company;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -20,10 +20,10 @@ import java.util.List;
 @Transactional
 public class CompanyService {
     @Autowired
-    @Qualifier("companyDaoJpa")
-    CompanyDao companyDao;
+    @Qualifier ("companyDaoJpa")
+    CompanyDaoJPA companyDao;
 
-    public List<Company> getCompanyList(){
+    public List<Company> getCompanyList() {
         return companyDao.getCompanyList();
     }
 

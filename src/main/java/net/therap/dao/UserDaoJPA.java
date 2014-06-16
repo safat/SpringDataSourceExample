@@ -17,24 +17,24 @@ import java.util.List;
  */
 @Repository
 @Qualifier ("userDaoJpa")
-public class UserDaoJPA implements UserDao{
+public class UserDaoJPA implements UserDao {
 
     @PersistenceContext
     private EntityManager entityManager;
 
     @Override
     public List<User> getUserList() {
-       Query query  = entityManager.createQuery("FROM User ");
-       return query.getResultList();
+        Query query = entityManager.createQuery("FROM User ");
+        return query.getResultList();
     }
 
     private void addUser(User user) {
-      entityManager.persist(user);
-      entityManager.flush();
-   }
+        entityManager.persist(user);
+        entityManager.flush();
+    }
 
-    public User getUserById(String id){
-       return entityManager.find(User.class,"sujon");
+    public User getUserById(String id) {
+        return entityManager.find(User.class, "sujon");
     }
 
 }

@@ -1,6 +1,7 @@
 package net.therap.domain;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -11,24 +12,24 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 @Entity
-@Table(name = "company")
-public class Company {
+@Table (name = "company")
+public class Company implements Serializable {
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    @Column(name = "idcompany")
+    @Column (name = "idcompany")
     private int idCompany;
 
-    @Column(name = "name")
+    @Column (name = "name")
     private String name;
 
-    @Column(name = "address")
+    @Column (name = "address")
     private String address;
 
-    @OneToMany( targetEntity = Client.class, fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinTable(name = "company_client",
-            joinColumns=@JoinColumn(name="company_idcompany"),
-            inverseJoinColumns=@JoinColumn(name="client_idclient"))
+    @OneToMany (targetEntity = Client.class, fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable (name = "company_client",
+            joinColumns = @JoinColumn (name = "company_idcompany"),
+            inverseJoinColumns = @JoinColumn (name = "client_idclient"))
     private List<Client> clientList;
 
 

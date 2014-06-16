@@ -24,6 +24,6 @@ public class UserService {
     private UserDao userDao;
 
     public List<User> getUserList() {
-       return userDao.getUserList();
+        return userDao.getUserList();
     }
 }

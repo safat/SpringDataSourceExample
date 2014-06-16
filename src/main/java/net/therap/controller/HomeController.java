@@ -25,7 +25,7 @@ public class HomeController {
         for (User user : userList) {
             userNames += user.toString() + " </br>";
         }
-        model.addAttribute("message", userList.size()+" <hr> </br> " + userNames);
+        model.addAttribute("message", userList.size() + " <hr> </br> " + userNames);
 
         return "hello";
     }

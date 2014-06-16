@@ -53,11 +53,11 @@ public class CompanyController {
 
     @RequestMapping (value = "/show", method = RequestMethod.GET)
     public String showCompanyList(ModelMap modelMap) {
-        modelMap.addAttribute("list", getString(companyService.getCompanyList()));
+        modelMap.addAttribute("list", getCompanyListString(companyService.getCompanyList()));
         return "showCompanies";
     }
 
-    private String getString(List<Company> companyList) {
+    private String getCompanyListString(List<Company> companyList) {
         String tmp = "";
         for (Company comp : companyList) {
             tmp += "</br>";

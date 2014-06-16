@@ -12,19 +12,19 @@ import javax.persistence.Table;
  * Time: 10:23 AM
  */
 @Entity
-@Table(name = "user")
+@Table (name = "user")
 public class User {
     @Id
-    @Column(name = "id")
+    @Column (name = "id")
     private String id;
 
-    @Column(name = "name")
+    @Column (name = "name")
     private String name;
 
-    @Column(name = "password")
+    @Column (name = "password")
     private String password;
 
-    @Column(name = "is_admin")
+    @Column (name = "is_admin")
     private boolean isAdmin;
 
     public String getId() {
