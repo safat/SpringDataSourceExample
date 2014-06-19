@@ -2,6 +2,7 @@ package net.therap.controller;
 
 import net.therap.domain.Client;
 import net.therap.domain.Company;
+import net.therap.domain.Service;
 import net.therap.service.CompanyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,22 +27,22 @@ public class CompanyController {
     private CompanyService companyService;
 
 
-    @RequestMapping (value = "/insert", method = RequestMethod.GET)
+    @RequestMapping (value = "/addCompany", method = RequestMethod.GET)
     public String insertCompany(ModelMap modelMap) {
         Company company = new Company();
-        company.setName("company 4");
-        company.setAddress("address of company 4");
+        company.setName("company 5");
+        company.setAddress("address of company 5");
 
         List<Client> clientList = new ArrayList();
 
         Client client = new Client();
-        client.setName("client 6");
-        client.setAddress("address of client 6");
+        client.setName("client 8");
+        client.setAddress("address of client 8");
         clientList.add(client);
 
         client = new Client();
-        client.setName("client 7");
-        client.setAddress("address of client 7");
+        client.setName("client 9");
+        client.setAddress("address of client 9");
         clientList.add(client);
 
         company.setClientList(clientList);
@@ -51,10 +52,24 @@ public class CompanyController {
         return "employeeInsertSuccess";
     }
 
-    @RequestMapping (value = "/show", method = RequestMethod.GET)
+    @RequestMapping (value = "/deleteCompany", method = RequestMethod.GET)
+    public String deleteCompany(ModelMap modelMap) {
+        companyService.deleteCompanyById(8);
+        return "redirect:/companies";
+    }
+
+
+    @RequestMapping (value = "/companies", method = RequestMethod.GET)
     public String showCompanyList(ModelMap modelMap) {
         modelMap.addAttribute("list", getCompanyListString(companyService.getCompanyList()));
-        return "showCompanies";
+        return "companies";
+    }
+
+
+    @RequestMapping (value = "/company", method = RequestMethod.GET)
+    public String getCompanyById(ModelMap modelMap) {
+        modelMap.addAttribute("list", companyService.getCompanyById(1).toString());
+        return "companies";
     }
 
     private String getCompanyListString(List<Company> companyList) {
@@ -66,6 +81,14 @@ public class CompanyController {
                 tmp += "-> ";
                 tmp += client.toString() + "</br>";
             }
+
+            tmp += "</br> services : </br>" ;
+            for (Service service : comp.getServices()){
+                tmp += "-->"+service.getServiceName()+"</br>";
+            }
+
+            tmp += "</br>";
+
         }
 
         return tmp;

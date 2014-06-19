@@ -11,13 +11,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.List;
 
 @Controller
-@RequestMapping ("/test")
 public class HomeController {
 
     @Autowired
     private UserService userService;
 
-    @RequestMapping (method = RequestMethod.GET)
+    @RequestMapping (value = "/users", method = RequestMethod.GET)
     public String getUserList(ModelMap model) {
         List<User> userList = userService.getUserList();
 
@@ -27,6 +26,12 @@ public class HomeController {
         }
         model.addAttribute("message", userList.size() + " <hr> </br> " + userNames);
 
+        return "hello";
+    }
+
+    @RequestMapping (value = "/", method = RequestMethod.GET)
+    public String getWelcomeMessage(ModelMap model) {
+        model.addAttribute("message", "hello...");
         return "hello";
     }
 

@@ -1,6 +1,6 @@
 package net.therap.service;
 
-import net.therap.dao.CompanyDaoJPA;
+import net.therap.dao.CompanyDao;
 import net.therap.domain.Company;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -21,7 +21,7 @@ import java.util.List;
 public class CompanyService {
     @Autowired
     @Qualifier ("companyDaoJpa")
-    CompanyDaoJPA companyDao;
+    CompanyDao companyDao;
 
     public List<Company> getCompanyList() {
         return companyDao.getCompanyList();
@@ -29,5 +29,13 @@ public class CompanyService {
 
     public void insertCompany(Company company) {
         companyDao.insertCompany(company);
+    }
+
+    public void deleteCompanyById(int id) {
+        companyDao.deleteCompanyById(id);
+    }
+
+    public Company getCompanyById(int id){
+        return companyDao.getCompanyById(id);
     }
 }

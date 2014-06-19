@@ -3,6 +3,7 @@ package net.therap.domain;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -16,7 +17,7 @@ import java.util.List;
 public class Company implements Serializable {
 
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @GeneratedValue (strategy = GenerationType.AUTO)
     @Column (name = "idcompany")
     private int idCompany;
 
@@ -26,12 +27,15 @@ public class Company implements Serializable {
     @Column (name = "address")
     private String address;
 
-    @OneToMany (targetEntity = Client.class, fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToMany (targetEntity = Client.class, fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
     @JoinTable (name = "company_client",
             joinColumns = @JoinColumn (name = "company_idcompany"),
             inverseJoinColumns = @JoinColumn (name = "client_idclient"))
     private List<Client> clientList;
 
+    @OneToMany(targetEntity = Service.class, fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "company")
+    @OrderBy("serviceName ASC ")
+     private Set<Service> services;
 
     public int getIdCompany() {
         return idCompany;
@@ -65,6 +69,13 @@ public class Company implements Serializable {
         this.clientList = clientList;
     }
 
+    public Set<Service> getServices() {
+        return services;
+    }
+
+    public void setServices(Set<Service> services) {
+        this.services = services;
+    }
 
     @Override
     public String toString() {
@@ -72,6 +83,8 @@ public class Company implements Serializable {
                 "idCompany=" + idCompany +
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +
+                ", services='" + services.toString() + '\'' +
                 '}';
     }
+
 }

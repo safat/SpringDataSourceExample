@@ -20,7 +20,7 @@ import java.util.List;
 
 @Repository
 @Qualifier ("companyDaoJpa")
-public class CompanyDaoJPA implements CompanyDao{
+public class CompanyDaoJPA implements CompanyDao {
 
     @PersistenceContext
     private EntityManager entityManager;
@@ -35,5 +35,19 @@ public class CompanyDaoJPA implements CompanyDao{
     public void insertCompany(Company company) {
         entityManager.persist(company);
         entityManager.flush();
+    }
+
+    @Override
+    public void deleteCompanyById(int id) {
+        Company companyToBeDeleted = entityManager.find(Company.class, id);
+
+        if (companyToBeDeleted != null) {
+            entityManager.remove(companyToBeDeleted);
+        }
+    }
+
+    @Override
+    public Company getCompanyById(int id) {
+       return entityManager.find(Company.class, id);
     }
 }

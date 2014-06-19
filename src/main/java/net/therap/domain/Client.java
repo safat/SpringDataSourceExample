@@ -2,6 +2,8 @@ package net.therap.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
+import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,6 +15,7 @@ import java.io.Serializable;
 @Entity
 @Table (name = "client")
 public class Client implements Serializable {
+
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     @Column (name = "idclient")
@@ -23,6 +26,15 @@ public class Client implements Serializable {
 
     @Column (name = "address")
     private String address;
+
+    @ManyToMany(mappedBy = "clientList", fetch = FetchType.EAGER)
+    private List<Company> companyList;
+
+    @OneToMany (targetEntity = Service.class, fetch = FetchType.EAGER)
+    @JoinTable (name = "client_service",
+            joinColumns = @JoinColumn (name = "client_id"),
+            inverseJoinColumns = @JoinColumn (name = "service_id"))
+    private Set<Service> serviceList;
 
     public Integer getIdclient() {
         return idclient;
@@ -46,6 +58,23 @@ public class Client implements Serializable {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public List<Company> getCompanyList() {
+        return companyList;
+    }
+
+    public void setCompanyList(List<Company> companyList) {
+        this.companyList = companyList;
+    }
+
+
+    public Set<Service> getServiceList() {
+        return serviceList;
+    }
+
+    public void setServiceList(Set<Service> serviceList) {
+        this.serviceList = serviceList;
     }
 
     @Override

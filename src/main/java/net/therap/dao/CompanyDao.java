@@ -14,4 +14,6 @@ import java.util.List;
 public interface CompanyDao {
     public List<Company> getCompanyList();
     public void insertCompany(Company company);
+    void deleteCompanyById(int id);
+    public Company getCompanyById(int id);
 }
